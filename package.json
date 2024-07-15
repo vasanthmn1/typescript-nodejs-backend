@@ -14,13 +14,21 @@
     "@types/multer": "^1.4.11",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "imap-simple": "^5.1.0",
+    "lodash": "^4.17.21",
+    "mailparser": "^3.7.1",
     "multer": "^1.4.5-lts.1",
-    "node-imap": "^0.9.6"
+    "node-imap": "^0.9.6",
+    "nodemailer": "^6.9.14"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@types/imap-simple": "^4.2.9",
+    "@types/lodash": "^4.17.6",
+    "@types/mailparser": "^3.4.4",
     "@types/node": "^20.14.9",
     "@types/node-imap": "^0.9.3",
+    "@types/nodemailer": "^6.4.15",
     "typescript": "^5.5.3"
   }
 }
