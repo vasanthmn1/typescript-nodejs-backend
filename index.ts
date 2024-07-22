@@ -6,11 +6,13 @@ import { DB } from './src/db/connect/connectToMongoDB'
 import { ImapConnecting } from "./src/imap/ImapConnecting";
 
 import uploadRoutes from './src/router/ImageUploadRouter'
+
+import emailRoutes from './src/router/EmailRoutes'
 dotenv.config();
 
 
 const app: Express = express();
-const port = 9000;
+const port = 9002;
 
 
 
@@ -23,7 +25,7 @@ const startServer = () => {
 // Initialize the app by connecting to DB and starting the server
 const init = async () => {
     await DB();
-    await ImapConnecting.fetchAndSaveMessages();
+    // await ImapConnecting.fetchAndSaveMessages();
 
     startServer();
 };
@@ -36,7 +38,7 @@ init().catch(err => {
 
 
 
-app.use('/image', uploadRoutes)
+app.use('/email', emailRoutes)
 
 
 
@@ -55,13 +57,7 @@ app.use('/image', uploadRoutes)
 //         pass: 'acmtacioalysooaq',
 //     }
 // })
-// // const message = {
-// //     from: 'mnvasanthcode@gmail.com',
-// //     to: 'mnvasanth4@gmail.com',
-// //     subject: "Hello",
-// //     html: `<h3>You sddddddddddddddddddddddddddd dd</h1>`,
-// //     messageId: '809-66792323-233'
-// // }
+
 
 // // app.get('/sent/email', async (req: Request, res: Response) => {
 // //     try {
