@@ -3,24 +3,21 @@ import nodemailer from 'nodemailer'
 
 export class SentEmailController {
 
-
-
     sentEmail = async (req: Request, res: Response) => {
-
         let body = req.body;
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             // host: "sandbox.smtp.mailtrap.io",
             // port: 2525,
             auth: {
-                user: 'mnvasanthcode@gmail.com',
-                pass: 'acmtacioalysooaq',
+                user: 'deomo@gmail.com',
+                pass: '',
             }
         })
 
         const message = {
-            from: 'mnvasanthcode@gmail.com',
-            to: 'mnvasanth4@gmail.com',
+            from: 'demo@gmail.com',
+            to: 'demo@gmail.com',
             subject: "Hello #50784",
             html: `<h3>You Senemail dd</h1>`,
             messageId: '809-66792323-233'
